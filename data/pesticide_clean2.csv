@@ -1,0 +1,29 @@
+Crop,Major_Disease,Disease_Solution,Major_Pest,Recommended_Pesticide,Dose_Instruction
+Rice,Blast (Pyricularia grisea),Tricyclazole; Botanicals (Neem/Tulsi extracts),Brown Plant Hopper,Fipronil,Follow product label
+Rice,Blast (Pyricularia grisea),Tricyclazole; Botanicals (Neem/Tulsi extracts),Brown Plant Hopper,Buprofezin,Follow product label
+Rice,Blast (Pyricularia grisea),Tricyclazole; Botanicals (Neem/Tulsi extracts),Brown Plant Hopper,Flonicamid,Follow product label
+Rice,Bacterial Leaf Blight,Copper oxychloride; Streptocycline,Leaf Folder,Imidacloprid,Follow product label
+Rice,Bacterial Leaf Blight,Copper oxychloride; Streptocycline,Leaf Folder,Buprofezin,Follow product label
+Rice,Sheath Blight,Carbendazim + Mancozeb,Gall Midge,Flonicamid,Follow product label
+Rice,Sheath Blight,Carbendazim + Mancozeb,Gall Midge,Dichlorvos,Follow product label
+Rice,False Smut,Propiconazole; Carbendazim,Thrips,Neem Oil,Follow product label
+Rice,False Smut,Propiconazole; Carbendazim,Thrips,NSKE 5%,Follow product label
+Tomato,Damping Off/Collar Rot,Trichoderma spp.; Copper oxychloride,Fruit Borer,Imidacloprid,Follow product label
+Tomato,Damping Off/Collar Rot,Trichoderma spp.; Copper oxychloride,Fruit Borer,Chlorpyrifos,Follow product label
+Tomato,Early/Late Blight,Mancozeb 75% WP; Metalaxyl,Aphids,Dimethoate,Follow product label
+Tomato,Early/Late Blight,Mancozeb 75% WP; Metalaxyl,Aphids,Acephate,Follow product label
+Potato,Early/Late Blight,Mancozeb 75% WP; Metalaxyl,Cutworm,Chlorpyrifos,Follow product label
+Potato,Early/Late Blight,Mancozeb 75% WP; Metalaxyl,Cutworm,Imidacloprid,Follow product label
+Brinjal,Wilt; Phomopsis Blight,Carbendazim; Soilarization,Shoot/fruit borer,Imidacloprid,Follow product label
+Brinjal,Wilt; Phomopsis Blight,Carbendazim; Soilarization,Shoot/fruit borer,Acephate,Follow product label
+Brinjal,Wilt; Phomopsis Blight,Carbendazim; Soilarization,Shoot/fruit borer,Neem Oil,Follow product label
+Groundnut,Leaf Spot; Rust,Mancozeb; Chlorothalonil; Crop Rotation,Root Grub,Chlorpyrifos,Follow product label
+Groundnut,Leaf Spot; Rust,Mancozeb; Chlorothalonil; Crop Rotation,Root Grub,NSKE,Follow product label
+Mustard,Alternaria Blight,Mancozeb; Iprodione,Aphids,Dimethoate,Follow product label
+Mustard,Alternaria Blight,Mancozeb; Iprodione,Aphids,Imidacloprid,Follow product label
+Maize,Downy Mildew; Rust,Metalaxyl; Mancozeb,Stem Borer,Chlorpyrifos,Follow product label
+Maize,Downy Mildew; Rust,Metalaxyl; Mancozeb,Stem Borer,Lambda Cyhalothrin,Follow product label
+Cotton,Boll Rot; Wilt,Carbendazim; Thiram,Pink Bollworm,Imidacloprid,Follow product label
+Cotton,Boll Rot; Wilt,Carbendazim; Thiram,Pink Bollworm,Thiodicarb,Follow product label
+Sugarcane,Red Rot,Carbendazim; Soil Health,Top Borer,Chlorpyrifos,Follow product label
+Sunflower,Downy Mildew,Metalaxyl; Field Drainage,Capitulum Borer,Lambda Cyhalothrin,Follow product label

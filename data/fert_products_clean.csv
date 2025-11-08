@@ -1,0 +1,31 @@
+﻿District,Soil_Type,Major Crops,Product_Name,Typical NPK Ratio (kg/ha) of Products,Product_N,Product_P,Product_K
+Angul,Red Soil,"Rice, Maize, Pulses","Paradeep Phosphates, IFCO, Talcher Fertilizers","20-40-20 (PPL), 18-46-0 (DAP), 18-18-18 (NPK)",18,18,18
+Balasore,Alluvial Soil,"Rice, Pulses, Oilseeds","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-46-0 (DAP), 19-19-19 (NPK)",19,19,19
+Baragarh,Red Soil,"Rice, Maize, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Bhadrak,Alluvial Soil,"Rice, Maize, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-46-0 (DAP), 19-19-19 (NPK)",19,19,19
+Bolangir,Red Soil,"Rice, Pulses, Oilseeds","Paradeep Phosphates, IFCO","20-40-20 (PPL), 19-19-19 (NPK)",19,19,19
+Boudh,Red Soil,"Rice, Pulses","Paradeep Phosphates, Indian Plant Feeds","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Cuttack,Alluvial Soil,"Rice, Mustard, Vegetables","Paradeep Phosphates, Talcher Fertilizers","20-40-20 (PPL), 18-46-0 (DAP), 19-19-19 (NPK)",19,19,19
+Deogarh,Red Soil,"Rice, Maize","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Dhenkanal,Red Soil,"Rice, Vegetables","Paradeep Phosphates, Indian Plant Feeds","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Gajapati,Red Soil,"Rice, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 19-19-19 (NPK)",19,19,19
+Ganjam,Black Soil,"Rice, Cotton, Sugarcane","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Jagatsinghpur,Alluvial Soil,"Rice, Groundnut, Mustard","Paradeep Phosphates, IFCO, Talcher Fertilizers","20-40-20 (PPL), 18-46-0 (DAP), 19-19-19 (NPK)",19,19,19
+Jajpur,Alluvial Soil,"Rice, Mustard","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Jharsuguda,Red Soil,"Rice, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Kalahandi,Red Soil,"Rice, Maize","Paradeep Phosphates, Indian Plant Feeds","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Kandhamal,Red Soil,"Rice, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 19-19-19 (NPK)",19,19,19
+Kendrapara,Alluvial Soil,"Rice, Mustard, Vegetables","Paradeep Phosphates, Talcher Fertilizers, IFCO","20-40-20 (PPL), 18-46-0 (DAP), 18-18-18 (NPK)",18,18,18
+Keonjhar,Red Soil,"Rice, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 19-19-19 (NPK)",19,19,19
+Khordha,Red Soil,"Rice, Vegetables","Paradeep Phosphates, Indian Plant Feeds","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Koraput,Lateritic Soil,"Rice, Maize","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Malkangiri,Red Soil,"Rice, Maize","IFCO, Indian Plant Feeds","18-46-0 (DAP), 18-18-18 (NPK)",18,18,18
+Mayurbhanj,Lateritic Soil,"Rice, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 19-19-19 (NPK)",19,19,19
+Nabarangpur,Red Soil,"Rice, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 19-19-19 (NPK)",19,19,19
+Nayagarh,Red Soil,"Rice, Pulses","Paradeep Phosphates, Indian Plant Feeds","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Nuapada,Red Soil,"Rice, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 19-19-19 (NPK)",19,19,19
+Puri,Alluvial Soil,"Rice, Mustard, Vegetables","Paradeep Phosphates, Talcher Fertilizers, IFCO","20-40-20 (PPL), 18-46-0 (DAP), 18-18-18 (NPK)",18,18,18
+Rayagada,Red Soil,"Rice, Maize","IFCO, Paradeep Phosphates","18-46-0 (DAP), 20-40-20 (PPL)",20,20,20
+Sambalpur,Red Soil,"Rice, Maize, Pulses","Paradeep Phosphates, IFCO","20-40-20 (PPL), 19-19-19 (NPK)",19,19,19
+Subarnapur,Red Soil,"Rice, Cotton","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18
+Sundargarh,Red Soil,"Rice, Maize","Paradeep Phosphates, IFCO","20-40-20 (PPL), 18-18-18 (NPK)",18,18,18

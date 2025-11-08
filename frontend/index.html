@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KrishAI — MVP</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="logo">🌱</div>
+        <div>
+          <h1>KrishAI — MVP</h1>
+          <div class="sub">Predict yield · Fertilizer · Pesticide · Minimal inputs</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Inputs</h2>
+
+        <div class="row">
+          <label>
+            Crop
+            <select id="crop" class="full">
+              <option value="rice">Rice</option>
+              <option value="maize">Maize</option>
+              <option value="cotton">Cotton</option>
+              <option value="groundnut">Groundnut</option>
+              <option value="tomato">Tomato</option>
+              <option value="potato">Potato</option>
+              <option value="brinjal">Brinjal</option>
+              <option value="mustard">Mustard</option>
+              <option value="sunflower">Sunflower</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <label>
+            Area
+            <div class="inline">
+              <input id="area" type="number" min="0" step="0.01" value="1" placeholder="Enter area" />
+              <select id="areaUnit" class="smallSelect">
+                <option value="ha">Hectare (ha)</option>
+                <option value="acre">Acre</option>
+                <option value="guntha">Guntha</option>
+                <option value="m2">m²</option>
+              </select>
+            </div>
+            <div class="hint">Enter numeric area — conversion is automatic.</div>
+          </label>
+
+          <label>
+            Soil type (optional)
+            <select id="soilType">
+              <option value="">Auto / Unknown</option>
+              <option value="Alluvial Soil">Alluvial Soil</option>
+              <option value="Red Soil">Red Soil</option>
+              <option value="Lateritic Soil">Lateritic Soil</option>
+              <option value="Black Soil">Black Soil</option>
+              <option value="Red and Black Soil">Red and Black Soil</option>
+            </select>
+            <div class="hint">Pick soil from dataset values (optional).</div>
+          </label>
+
+          <label>
+            Location
+            <div class="inline">
+              <input id="locationText" placeholder="District, City or Town (e.g. Bhubaneswar)" />
+              <button id="detectBtn" class="small">Auto-detect</button>
+            </div>
+            <div class="hint">Auto-detect will use your device location and fill a readable place name.</div>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="autoFillBtn">Auto-fill local conditions</button>
+          <button id="predictYieldBtn" class="primary">Predict Yield & Recommendation</button>
+          <button id="predictCropBtn">Predict Best Crop</button>
+        </div>
+      </section>
+
+      <section id="result" class="card hidden">
+        <h2>Result</h2>
+        <div id="yieldBlock" class="block"></div>
+        <div id="fertBlock" class="block"></div>
+        <div id="pestBlock" class="block"></div>
+        <div id="cropBlock" class="block"></div>
+      </section>
+
+      <section class="card notes">
+        <strong>Notes</strong>
+        <ul>
+          <li>Backend must be running at <code>http://127.0.0.1:8000</code>. Update BACKEND in <code>app.js</code> if different.</li>
+          <li>Auto-detect uses browser geolocation + OpenStreetMap reverse-geocoding to fill a human-readable location name.</li>
+          <li>Soil dropdown contains only soils present in your dataset; leave blank to let backend choose.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      KrishAI — Minimal MVP
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

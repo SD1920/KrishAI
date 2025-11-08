@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.env/
+*.env
+
+# Data & models (large files)
+*.csv
+*.xlsx
+*.zip
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend builds
+node_modules/
+dist/
