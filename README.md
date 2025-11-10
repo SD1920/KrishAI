@@ -43,50 +43,70 @@ You'll need:
 
 1. **Clone this repo**
 ```bash
-git clone https://github.com/yourusername/krishai-project.git
-cd krishai-project
+git clone https://github.com/SD1920/KrishAI.git
+cd KrishAI
 ```
 
-2. **Install dependencies**
+2. **Set up virtual environment** (recommended)
 ```bash
-pip install -r requirements.txt
+python -m venv venv
+venv\Scripts\activate  # On Windows
+# source venv/bin/activate  # On Mac/Linux
 ```
 
-3. **Run the backend**
+3. **Install dependencies**
+```bash
+pip install -r backend/requirements.txt
+```
+
+4. **Run the backend**
 ```bash
 cd backend
-uvicorn main:app --reload --port 8000
+python app.py
 ```
 This starts the FastAPI server at http://localhost:8000
 
-4. **Run the frontend**
+5. **Run the frontend**
+Open a new terminal:
 ```bash
 cd frontend
 python -m http.server 8001
 ```
 Or just open `index.html` in your browser
 
-5. **Open it up**
+6. **Open it up**
 Go to http://localhost:8001 in your browser and you're good to go!
 
 ## Project Structure
 
 ```
-krishai-project/
+KrishAI/
 ├── backend/
-│   ├── main.py              # FastAPI app, all the endpoints
-│   ├── models/              # Trained ML models (.pkl files)
-│   ├── data/                # CSV files with fertilizer/pesticide info
-│   └── requirements.txt     # Python dependencies
+│   ├── app.py                  # Main FastAPI application (15KB)
+│   ├── requirements.txt        # Python dependencies
+│   └── __pycache__/           # Python cache files
 ├── frontend/
-│   ├── index.html           # Main page
-│   ├── styles.css           # Styling
-│   └── app.js              # All the frontend logic
-├── datasets/                # Original datasets we collected
-│   ├── merged_ready3.csv    # Main agricultural data
-│   ├── fert_products_clean.csv
-│   └── pesticide_clean2.csv
-└── README.md               # You are here!
+│   ├── index.html              # Main page (4KB)
+│   ├── styles.css              # Styling (2KB)
+│   ├── app.js                  # Frontend logic (7KB)
+│   └── .gitignore             # Git ignore file
+├── data/                       # All datasets
+│   ├── merged_ready3.csv       # Main agricultural data (600KB, 6000+ records)
+│   ├── Crop_recommendation2.csv # Crop training data (144KB)
+│   ├── fert_products_clean.csv # Fertilizer products (3KB)
+│   └── pesticide_clean2.csv    # Pesticide recommendations (2KB)
+├── ml_artifacts/               # Trained models and notebooks
+│   ├── crop_recommendation_model.pkl  # Random Forest model (19MB)
+│   ├── crop_yield_model.pkl          # Gradient Boosting model (19MB)
+│   ├── crop_label_encoder.pkl        # Label encoder for crops
+│   ├── crop_scaler.pkl              # Feature scaler
+│   ├── encoders.pkl                 # Other encoders
+│   ├── feature_cols.pkl             # Feature column names
+│   ├── AI_PROJECT.ipynb            # Main training notebook
+│   └── crop_recommender.ipynb      # Crop recommendation notebook
+├── scripts/                    # Utility scripts
+├── venv/                       # Virtual environment (not in git)
+└── README.md                   # You are here!
 ```
 
 ## How We Built It
@@ -104,6 +124,7 @@ krishai-project/
 - Gradient Boosting gave us the best R² score for yield prediction
 - Used GridSearchCV for hyperparameter tuning (took forever to run)
 - Final accuracy: 94.2% for crop recommendation, R² of 0.89 for yield
+- Model training done in Jupyter notebooks (check `ml_artifacts/` folder)
 
 ### Frontend (keeping it simple)
 - No frameworks! Just vanilla JS because we needed it to load fast on 2G/3G
@@ -113,10 +134,10 @@ krishai-project/
 - Total bundle size: 18KB - loads in like 1 second even on slow connections
 
 ### Backend (making it work)
-- FastAPI because it's fast and has automatic API docs
+- FastAPI in `app.py` because it's fast and has automatic API docs
 - Three main endpoints: `/recommend`, `/recommend_crop`, `/auto_features`
 - Integrated weather API for real-time temperature/humidity/rainfall
-- SQLite for storing fertilizer and pesticide data (could've used CSV but DB is cleaner)
+- Loads pre-trained models from `ml_artifacts/` folder on startup
 - Added CORS middleware so frontend and backend can talk
 
 ## Challenges We Faced
@@ -124,7 +145,7 @@ krishai-project/
 1. **Data quality** - Government datasets had tons of missing values and inconsistencies. Spent days cleaning it.
 2. **API rate limits** - OpenStreetMap was throttling us. Added caching to fix it.
 3. **Mobile optimization** - Had to test on actual phones because Chrome DevTools mobile view isn't the same as real devices
-4. **Model size** - Our first model was 50MB. Had to optimize it down to 5MB so it loads faster
+4. **Model size** - Our first model was 50MB. Had to optimize it down to 19MB (still big but manageable)
 5. **CORS issues** - Spent an entire evening figuring out why frontend couldn't talk to backend. Classic web dev problem.
 
 ## What We Learned
@@ -150,7 +171,7 @@ krishai-project/
 **Yashraj Singh (2328058)** - Frontend, Data Collection, UX Design  
 Handled all the data gathering, built the entire frontend, integrated APIs, and made sure it works on phones.
 
-**Sanjam Das (XXXX)** - Machine Learning, Backend, Data Preprocessing  
+**Sanjam Das (2328196)** - Machine Learning, Backend, Data Preprocessing  
 Cleaned the data, trained the ML models, built the FastAPI backend, and got everything deployed.
 
 ## Tech Stack
@@ -166,8 +187,9 @@ Cleaned the data, trained the ML models, built the FastAPI backend, and got ever
 - Pandas, NumPy
 - Open-Meteo Weather API
 
-**Database:**
-- SQLite (for now - might migrate to PostgreSQL later)
+**Development:**
+- Jupyter Notebook for model training
+- Git for version control
 
 ## Contributing
 
@@ -189,8 +211,7 @@ MIT License - do whatever you want with this code, just don't sue us if your cro
 
 Got questions? Found a bug? Want to roast our code?
 
-- Yashraj: yashraj.singh@example.com
-- Sanjam: sanjam.das@example.com
+- Sanjam: sanjamdas2@gmail.com
 
 Or just open an issue on GitHub and we'll get back to you... eventually.
 
