@@ -116,7 +116,7 @@ KrishAI/
 - Got district-wise soil data (NPK levels, pH) for 28 districts in Odisha
 - Compiled fertilizer products available locally (brand names, NPK ratios)
 - Gathered pesticide recommendations for different crops and pests
-- Historical yield data from past 5 years
+- Historical yield data from past 50 years
 
 ### Machine Learning (the fun part)
 - Cleaned data, handled missing values (used KNN imputation)
@@ -144,9 +144,8 @@ KrishAI/
 
 1. **Data quality** - Government datasets had tons of missing values and inconsistencies. Spent days cleaning it.
 2. **API rate limits** - OpenStreetMap was throttling us. Added caching to fix it.
-3. **Mobile optimization** - Had to test on actual phones because Chrome DevTools mobile view isn't the same as real devices
-4. **Model size** - Our first model was 50MB. Had to optimize it down to 19MB (still big but manageable)
-5. **CORS issues** - Spent an entire evening figuring out why frontend couldn't talk to backend. Classic web dev problem.
+3. **Model size** - Our first model was 50MB. Had to optimize it down to 19MB (still big but manageable)
+4. **CORS issues** - Spent an entire evening figuring out why frontend couldn't talk to backend. Classic web dev problem.
 
 ## What We Learned
 
@@ -188,7 +187,7 @@ Cleaned the data, trained the ML models, built the FastAPI backend, and got ever
 - Open-Meteo Weather API
 
 **Development:**
-- Jupyter Notebook for model training
+- Google Colab Notebook for model training
 - Git for version control
 
 ## Contributing
@@ -201,10 +200,9 @@ MIT License - do whatever you want with this code, just don't sue us if your cro
 
 ## Acknowledgments
 
-- Our project guide for not killing us during deadlines
 - KIIT University for the resources (and WiFi)
 - Odisha Agriculture Department for the data
-- Stack Overflow for fixing our bugs at 2 AM
+- Stack Overflow & ChatGPT, Claude for fixing our bugs at 2 AM
 - Coffee, lots of coffee
 
 ## Contact
