@@ -158,7 +158,7 @@ KrishAI/
 ## Future Plans (if we continue this)
 
 - [ ] Add multilingual support (Odia, Hindi)
-- [ ] Mobile app (React Native maybe?)
+- [ ] Mobile app (React Native)
 - [ ] IoT integration for automatic soil testing
 - [ ] Weather alerts for farmers
 - [ ] Market price predictions
@@ -167,16 +167,20 @@ KrishAI/
 
 ## Team
 
-**Aritro Halder** - Machine Learning, Data Collection, Data Preprocessing 
+**Aritro Halder** - Machine Learning, Data Collection, Data Preprocessing :
+
 Collected the data, preprocessed the data, and built "Crop_Recommendation" model.
 
-**Uddipt Shankar** - Machine Learning, Data Preprocessing, Data Analytics
+**Uddipt Shankar** - Machine Learning, Data Preprocessing, Data Analytics :
+
 Built the ML models, Analyzed the data, built "Yield_Prediction_and_Optimization" model.
 
-**Vinayaka Voleti** - Frontend, UX Design  
+**Vinayaka Voleti** - Frontend, UX Design :
+
 Handled all the data gathering, built the entire frontend, integrated APIs, and made sure it works on phones.
 
-**Sanjam Das** - Machine Learning, Backend 
+**Sanjam Das** - Machine Learning, Backend :
+
 Collected & cleaned the data, trained the ML models, built the FastAPI backend, and got everything deployed.
 
 ## Tech Stack
@@ -196,21 +200,12 @@ Collected & cleaned the data, trained the ML models, built the FastAPI backend, 
 - Google Colab Notebook for model training
 - Git for version control
 
-## Contributing
-
-This is a college project, so we're not really accepting contributions right now. But if you want to fork it and make your own version, go ahead! Just give us credit somewhere.
-
-## License
-
-MIT License - do whatever you want with this code, just don't sue us if your crops fail 😅
-
 ## Acknowledgments
 
-- KIIT University for the resources (and WiFi)
-- Odisha Agriculture Department for the data
-- Stack Overflow & ChatGPT, Claude for fixing our bugs at 2 AM
-- Coffee, lots of coffee
-
+- KIIT University for the resources
+- Odisha Agriculture Department and Indian Gov Datasets for the data
+- Stack Overflow & ChatGPT, Claude for fixing our bugs.
+  
 ## Contact
 
 Got questions? Found a bug? Want to roast our code?
