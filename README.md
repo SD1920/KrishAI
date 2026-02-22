@@ -167,11 +167,17 @@ KrishAI/
 
 ## Team
 
-**Yashraj Singh (2328058)** - Frontend, Data Collection, UX Design  
+**Aritro Halder** - Machine Learning, Data Collection, Data Preprocessing 
+Collected the data, preprocessed the data, and built "Crop_Recommendation" model.
+
+**Uddipt Shankar** - Machine Learning, Data Preprocessing, Data Analytics
+Built the ML models, Analyzed the data, built "Yield_Prediction_and_Optimization" model.
+
+**Vinayaka Voleti** - Frontend, UX Design  
 Handled all the data gathering, built the entire frontend, integrated APIs, and made sure it works on phones.
 
-**Sanjam Das (2328196)** - Machine Learning, Backend, Data Preprocessing  
-Cleaned the data, trained the ML models, built the FastAPI backend, and got everything deployed.
+**Sanjam Das** - Machine Learning, Backend 
+Collected & cleaned the data, trained the ML models, built the FastAPI backend, and got everything deployed.
 
 ## Tech Stack
 
