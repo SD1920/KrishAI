@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KrishAI — MVP</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <title>KrishAI</title>
+  <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
   <div class="app">
@@ -12,7 +12,7 @@
       <div class="brand">
         <div class="logo">🌱</div>
         <div>
-          <h1>KrishAI — MVP</h1>
+          <h1>KrishAI</h1>
           <div class="sub">Predict yield · Fertilizer · Pesticide · Minimal inputs</div>
         </div>
       </div>
@@ -50,7 +50,6 @@
                 <option value="m2">m²</option>
               </select>
             </div>
-            <div class="hint">Enter numeric area — conversion is automatic.</div>
           </label>
 
           <label>
@@ -63,16 +62,14 @@
               <option value="Black Soil">Black Soil</option>
               <option value="Red and Black Soil">Red and Black Soil</option>
             </select>
-            <div class="hint">Pick soil from dataset values (optional).</div>
           </label>
 
           <label>
             Location
             <div class="inline">
-              <input id="locationText" placeholder="District, City or Town (e.g. Bhubaneswar)" />
+              <input id="locationText" placeholder="District or city (e.g. Balasore)" />
               <button id="detectBtn" class="small">Auto-detect</button>
             </div>
-            <div class="hint">Auto-detect will use your device location and fill a readable place name.</div>
           </label>
         </div>
 
@@ -90,22 +87,13 @@
         <div id="pestBlock" class="block"></div>
         <div id="cropBlock" class="block"></div>
       </section>
-
-      <section class="card notes">
-        <strong>Notes</strong>
-        <ul>
-          <li>Backend must be running at <code>http://127.0.0.1:8000</code>. Update BACKEND in <code>app.js</code> if different.</li>
-          <li>Auto-detect uses browser geolocation + OpenStreetMap reverse-geocoding to fill a human-readable location name.</li>
-          <li>Soil dropdown contains only soils present in your dataset; leave blank to let backend choose.</li>
-        </ul>
-      </section>
     </main>
 
     <footer>
-      KrishAI — Minimal MVP
+      KrishAI · <a href="https://github.com/SD1920/KrishAI" target="_blank">GitHub</a>
     </footer>
   </div>
 
-  <script src="./app.js"></script>
+  <script src="/static/app.js"></script>
 </body>
 </html>
