@@ -3,10 +3,15 @@ import os
 import math
 import joblib
 import requests
+import traceback
+import logging
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any, List
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
@@ -155,30 +160,34 @@ def pesticide_text(crop: str) -> str:
 # -------------------------
 @app.post("/recommend")
 def recommend(r: Req):
-    base = {"Crop Type": r.crop, "District": r.district, "AREA(ha)": r.area_ha}
-    if r.soil_type:
-        base["Soil_Type"] = r.soil_type
+    try:
+        base = {"Crop Type": r.crop, "District": r.district, "AREA(ha)": r.area_ha}
+        if r.soil_type:
+            base["Soil_Type"] = r.soil_type
 
-    row = build_row(base)
-    pred = float(MODEL.predict(row)[0])
+        row = build_row(base)
+        pred = float(MODEL.predict(row)[0])
 
-    prod = choose_product(r.district)
-    delivered_total = 120.0
-    n, p, k = prod['npk']
-    delivered = {
-        "total_kg_per_ha": delivered_total,
-        "N_kg": round(delivered_total * (n / 100.0), 1),
-        "P_kg": round(delivered_total * (p / 100.0), 1),
-        "K_kg": round(delivered_total * (k / 100.0), 1),
-    }
-    pest_block = pesticide_text(r.crop)
+        prod = choose_product(r.district)
+        delivered_total = 120.0
+        n, p, k = prod['npk']
+        delivered = {
+            "total_kg_per_ha": delivered_total,
+            "N_kg": round(delivered_total * (n / 100.0), 1),
+            "P_kg": round(delivered_total * (p / 100.0), 1),
+            "K_kg": round(delivered_total * (k / 100.0), 1),
+        }
+        pest_block = pesticide_text(r.crop)
 
-    return {
-        "predicted_yield_kg_per_ha": round(pred, 2),
-        "fertilizer": prod,
-        "delivered": delivered,
-        "pesticide_advisory": pest_block
-    }
+        return {
+            "predicted_yield_kg_per_ha": round(pred, 2),
+            "fertilizer": prod,
+            "delivered": delivered,
+            "pesticide_advisory": pest_block
+        }
+    except Exception as e:
+        logger.error("recommend failed: %s\n%s", e, traceback.format_exc())
+        raise
 
 # -------------------------
 # Auto features (NPK, weather, pH)
