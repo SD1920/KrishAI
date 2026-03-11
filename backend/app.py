@@ -87,7 +87,11 @@ def build_row(base: Dict[str, Any]) -> pd.DataFrame:
 
     for col in FEATURE_COLS:
         if col in Xref.columns:
-            if np.issubdtype(Xref[col].dtype, np.number):
+            try:
+                is_numeric = np.issubdtype(Xref[col].dtype, np.number)
+            except TypeError:
+                is_numeric = False
+            if is_numeric:
                 row[col] = float(Xref[col].median())
             else:
                 row[col] = str(Xref[col].mode().iloc[0])
