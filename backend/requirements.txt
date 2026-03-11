@@ -1,7 +1,11 @@
 fastapi
-uvicorn
+uvicorn[standard]
 pandas
 numpy
 scikit-learn
 joblib
 requests
+aiofiles
+xgboost
+lightgbm
+catboost
