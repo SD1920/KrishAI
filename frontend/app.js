@@ -1,5 +1,8 @@
 // frontend/app.js
-const BACKEND = "http://127.0.0.1:8000";
+// Auto-detect backend: use relative path when deployed, localhost for dev
+const BACKEND = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+  ? "http://127.0.0.1:8000"
+  : "";
 
 function $(id){ return document.getElementById(id); }
 

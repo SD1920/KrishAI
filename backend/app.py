@@ -9,6 +9,8 @@ from datetime import datetime, timedelta
 from typing import Optional, Dict, Any, List
 
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -42,16 +44,10 @@ CROP_SCALER = joblib.load(os.path.join(ML_DIR, "crop_scaler.pkl"))
 # -------------------------
 app = FastAPI(title="Agri AI Backend", version="1.0")
 
-origins = [
-    "http://localhost:8001",
-    "http://127.0.0.1:8001",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -375,6 +371,20 @@ def recommend_crop(req: CropReq):
         "confidence_percent": round((top_conf_raw * 100) if top_conf_raw is not None else 100.0, 1),
         "top_candidates": top_list
     }
+
+# -------------------------
+# Static frontend
+# -------------------------
+FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
+if os.path.isdir(FRONTEND_DIR):
+    app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+
+@app.get("/")
+def serve_index():
+    index = os.path.join(FRONTEND_DIR, "index.html")
+    if os.path.isfile(index):
+        return FileResponse(index)
+    return {"status": "KrishAI API running"}
 
 # -------------------------
 # Debug endpoint (optional)

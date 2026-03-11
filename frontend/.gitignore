@@ -8,10 +8,8 @@ venv/
 .env/
 *.env
 
-# Data & models (large files)
-*.csv
-*.xlsx
-*.zip
+# Large data files (keep deployment CSVs in repo)
+# *.csv  ← REMOVED, app needs these at runtime
 
 # Logs
 *.log
